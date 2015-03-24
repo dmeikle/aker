@@ -1,0 +1,31 @@
+{
+    "name": "gossamer/aker",
+    "type": "library",
+    "description": "php token authorization module",
+    "keywords": ["php","token","authorization"],
+    "homepage": "https://github.com/dmeikle/aker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dave Meikle",
+            "email": "david@quantumunit.com",
+	    "homepage": "http://www.quantumunit.com",
+	    "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+	"monolog/monolog": "1.*",
+        "gossamer/caching": "dev-master",
+        "gossamer/horus": "dev-master",
+        "gossamer/pesedget": "dev-master"
+    },
+    "require-dev": {
+	"phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+	"psr-0": {
+            "Gossamer\\Aker": "src/"
+        }
+    }
+}
