@@ -50,6 +50,7 @@ class WebsocketClient
 		$header.= "Connection: Upgrade\r\n";
 		$header.= "Host: ".$host.":".$port."\r\n";
 		$header.= "Origin: http://foobar.com\r\n";
+		$header.= "ServerAuthToken: 12345\r\n";
                 $header.= 'Sec-WebSocket-Key: ' . $key1 . "\r\n";
 		$header.= "Sec-WebSocket-Key1: " . $key1 . "\r\n";
 		$header.= "Sec-WebSocket-Key2: " . $key2 . "\r\n";

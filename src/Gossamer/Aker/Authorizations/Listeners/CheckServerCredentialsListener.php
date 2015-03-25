@@ -31,9 +31,8 @@ class CheckServerCredentialsListener extends AbstractListener
         }
     }
 
-
     
-    private function checkServer($authToken, $ipAddress){
+    protected function checkServer($authToken, $ipAddress){
        
         $cachedToken = $this->retrieveFromCache($authToken, $ipAddress);
         if($cachedToken == true) {
@@ -70,7 +69,7 @@ class CheckServerCredentialsListener extends AbstractListener
     }
     
     
-    private function saveToCache($token, $ipAddress) {
+    protected function saveToCache($token, $ipAddress) {
         $this->logger->addDebug('CheckServerCredentials - save to cache');
         $cacheManager = new CacheManager($this->logger);
         $ipAddress = str_replace('.', '_', $ipAddress);
