@@ -11,7 +11,7 @@
 
 namespace Gossamer\Aker\Components\Providers;
 
-use Gossamer\Aker\Components\Core\SecurityToken;
+use Gossamer\Aker\Components\Security\Core\SecurityToken;
 
 /**
  * this class is deprecated

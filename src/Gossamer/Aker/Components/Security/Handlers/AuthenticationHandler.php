@@ -30,7 +30,7 @@ use libraries\utils\URISectionComparator;
  * eg:
 
   authentication_manager:
-  handler: 'Gossamer\Aker\Components\Core\AuthenticationManager'
+  handler: 'Gossamer\Aker\Components\Security\Core\AuthenticationManager'
   'arguments':
   - '@user_authentication_provider'
   #the '@' sign means it's a service already configured.

@@ -9,7 +9,7 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Core;
+namespace Gossamer\Aker\Components\Security\Core;
 
 /**
  * stores the token for the current user
@@ -23,7 +23,7 @@ class SecurityContext implements SecurityContextInterface {
     /**
      * accessor
      * 
-     * @return \Gossamer\Aker\Components\Core\TokenInterface
+     * @return \Gossamer\Aker\Components\Security\Core\TokenInterface
      */
     public function getToken() {
         return $this->token;
@@ -36,7 +36,7 @@ class SecurityContext implements SecurityContextInterface {
     /**
      * accessor
      * 
-     * @param \Gossamer\Aker\Components\Core\TokenInterface $token
+     * @param \Gossamer\Aker\Components\Security\Core\TokenInterface $token
      */
     public function setToken(TokenInterface $token) {
         $this->token = $token;

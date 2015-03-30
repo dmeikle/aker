@@ -13,7 +13,7 @@ namespace Gossamer\Aker\Components\Security\tests\providers;
 
 use Gossamer\Aker\Components\Providers\StaffAuthorizationProvider;
 use tests\BaseTest;
-use Gossamer\Aker\Components\Core\Client;
+use Gossamer\Aker\Components\Security\Core\Client;
 
 /**
  * Description of StaffAuthorizationProviderTest

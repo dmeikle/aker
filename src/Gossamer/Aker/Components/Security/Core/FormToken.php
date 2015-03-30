@@ -9,7 +9,7 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Core;
+namespace Gossamer\Aker\Components\Security\Core;
 
 /**
  * Used for embedding into a form to mitigate XSS attacks
@@ -26,7 +26,7 @@ class FormToken implements FormTokenInterface {
 
     /**
      * 
-     * @param \Gossamer\Aker\Components\Core\Client $client
+     * @param \Gossamer\Aker\Components\Security\Core\Client $client
      */
     public function __construct(Client $client) {
         $this->tokenTimestamp = time();

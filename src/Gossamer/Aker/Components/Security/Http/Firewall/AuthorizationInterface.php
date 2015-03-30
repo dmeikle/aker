@@ -11,8 +11,8 @@
 
 namespace Gossamer\Aker\Components\Security\http\firewall;
 
-use Gossamer\Aker\Components\Core\SecurityContextInterface;
-use Gossamer\Aker\Components\Core\AuthenticationManager;
+use Gossamer\Aker\Components\Security\Core\SecurityContextInterface;
+use Gossamer\Aker\Components\Security\Core\AuthenticationManager;
 
 /**
  * FirewallInterface

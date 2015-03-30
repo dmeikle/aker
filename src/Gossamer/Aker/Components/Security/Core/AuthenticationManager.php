@@ -9,14 +9,14 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Core;
+namespace Gossamer\Aker\Components\Security\Core;
 
-use Gossamer\Aker\Components\Core\AuthenticationManagerInterface;
+use Gossamer\Aker\Components\Security\Core\AuthenticationManagerInterface;
 use Monolog\Logger;
 use core\services\ServiceInterface;
-use Gossamer\Aker\Components\Core\SecurityToken;
-use Gossamer\Aker\Components\Exceptions\ArgumentNotPassedException;
-use Gossamer\Aker\Components\Exceptions\ClientCredentialsNotFoundException;
+use Gossamer\Aker\Components\Security\Core\SecurityToken;
+use Gossamer\Aker\Components\Security\Exceptions\ArgumentNotPassedException;
+use Gossamer\Aker\Components\Security\Exceptions\ClientCredentialsNotFoundException;
 use libraries\utils\Container;
 
 /**
@@ -52,7 +52,7 @@ class AuthenticationManager implements AuthenticationManagerInterface, ServiceIn
     /**
      * authenticates a user based on their context
      * 
-     * @param \Gossamer\Aker\Components\Core\SecurityContextInterface $context
+     * @param \Gossamer\Aker\Components\Security\Core\SecurityContextInterface $context
      * 
      * @throws ClientCredentialsNotFoundException
      */
@@ -127,7 +127,7 @@ class AuthenticationManager implements AuthenticationManagerInterface, ServiceIn
 
     /**
      * 
-     * @return \Gossamer\Aker\Components\Core\Client
+     * @return \Gossamer\Aker\Components\Security\Core\Client
      */
     public function getClient() {
         $client = new Client();

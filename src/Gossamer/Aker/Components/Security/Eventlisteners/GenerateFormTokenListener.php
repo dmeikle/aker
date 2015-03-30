@@ -11,7 +11,7 @@
 
 namespace Gossamer\Aker\Components\Security\eventlisteners;
 
-use Gossamer\Aker\Components\Core\FormToken;
+use Gossamer\Aker\Components\Security\Core\FormToken;
 
 /**
  * generates a token to be embedded in each form that will be posted to 

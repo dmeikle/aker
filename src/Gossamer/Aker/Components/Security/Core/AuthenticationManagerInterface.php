@@ -9,9 +9,9 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Core;
+namespace Gossamer\Aker\Components\Security\Core;
 
-use Gossamer\Aker\Components\Core\SecurityContextInterface;
+use Gossamer\Aker\Components\Security\Core\SecurityContextInterface;
 
 /**
  * AuthenticationManagerInterface

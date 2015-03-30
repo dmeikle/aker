@@ -9,14 +9,14 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Core;
+namespace Gossamer\Aker\Components\Security\Core;
 
-use Gossamer\Aker\Components\Core\AuthenticationManagerInterface;
+use Gossamer\Aker\Components\Security\Core\AuthenticationManagerInterface;
 use Monolog\Logger;
 use core\services\ServiceInterface;
-use Gossamer\Aker\Components\Core\SecurityToken;
-use Gossamer\Aker\Components\Exceptions\ArgumentNotPassedException;
-use Gossamer\Aker\Components\Exceptions\ClientCredentialsNotFoundException;
+use Gossamer\Aker\Components\Security\Core\SecurityToken;
+use Gossamer\Aker\Components\Security\Exceptions\ArgumentNotPassedException;
+use Gossamer\Aker\Components\Security\Exceptions\ClientCredentialsNotFoundException;
 use libraries\utils\Container;
 use Gossamer\Horus\EventListeners\Event;
 
@@ -53,7 +53,7 @@ class UserLoginManager implements AuthenticationManagerInterface, ServiceInterfa
     /**
      * authenticates a user based on their context
      * 
-     * @param \Gossamer\Aker\Components\Core\SecurityContextInterface $context
+     * @param \Gossamer\Aker\Components\Security\Core\SecurityContextInterface $context
      * 
      * @throws ClientCredentialsNotFoundException
      */
@@ -107,7 +107,7 @@ class UserLoginManager implements AuthenticationManagerInterface, ServiceInterfa
         $context->setToken($token);
 
         setSession('_security_secured_area', serialize($token));
-        $this->container->set('securityContext', 'Gossamer\Aker\Components\Core\SecurityContext', $context);
+        $this->container->set('securityContext', 'Gossamer\Aker\Components\Security\Core\SecurityContext', $context);
 
         $eventParams = array('client' => $client);
         $this->container->get('EventDispatcher')->dispatch(__YML_KEY, 'login_success', new Event('login_success', $eventParams));
@@ -116,7 +116,7 @@ class UserLoginManager implements AuthenticationManagerInterface, ServiceInterfa
     /**
      * checks to ensure a client's roles are known
      * 
-     * @param \Gossamer\Aker\Components\Core\Client $client
+     * @param \Gossamer\Aker\Components\Security\Core\Client $client
      * @return boolean
      */
     private function checkRolesSet(Client $client) {
@@ -132,7 +132,7 @@ class UserLoginManager implements AuthenticationManagerInterface, ServiceInterfa
     /**
      * check if a client account is locked
      * 
-     * @param \Gossamer\Aker\Components\Core\Client $client
+     * @param \Gossamer\Aker\Components\Security\Core\Client $client
      * 
      * @return boolean
      */
@@ -159,7 +159,7 @@ class UserLoginManager implements AuthenticationManagerInterface, ServiceInterfa
     /**
      * check a user's status
      * 
-     * @param \Gossamer\Aker\Components\Core\Client $client
+     * @param \Gossamer\Aker\Components\Security\Core\Client $client
      * 
      * @return boolean
      */
@@ -215,7 +215,7 @@ class UserLoginManager implements AuthenticationManagerInterface, ServiceInterfa
 
     /**
      * 
-     * @return \Gossamer\Aker\Components\Core\Client
+     * @return \Gossamer\Aker\Components\Security\Core\Client
      */
     public function getClient() {
 

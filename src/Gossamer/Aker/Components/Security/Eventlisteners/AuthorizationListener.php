@@ -12,8 +12,8 @@
 namespace Gossamer\Aker\Components\Security\eventlisteners;
 
 use Gossamer\Horus\EventListeners\AbstractListener;
-use Gossamer\Aker\Components\Exceptions\TokenExpiredException;
-use Gossamer\Aker\Components\Exceptions\TokenMissingException;
+use Gossamer\Aker\Components\Security\Exceptions\TokenExpiredException;
+use Gossamer\Aker\Components\Security\Exceptions\TokenMissingException;
 
 /**
  * checks to make sure a token exists on a submitted form

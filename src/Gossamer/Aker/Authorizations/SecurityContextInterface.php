@@ -11,7 +11,7 @@
 
 namespace Gossamer\Aker\Authorizations;
 
-use Gossamer\Aker\Components\Core\TokenInterface;
+use Gossamer\Aker\Components\Security\Core\TokenInterface;
 
 /**
  * SecurityContextInterface

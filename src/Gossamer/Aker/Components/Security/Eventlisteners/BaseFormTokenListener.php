@@ -12,8 +12,8 @@
 namespace Gossamer\Aker\Components\Security\eventlisteners;
 
 use Gossamer\Horus\EventListeners\AbstractListener;
-use Gossamer\Aker\Components\Core\FormToken;
-use Gossamer\Aker\Components\Core\Client;
+use Gossamer\Aker\Components\Security\Core\FormToken;
+use Gossamer\Aker\Components\Security\Core\Client;
 
 /**
  * base class for token authorizations
@@ -34,7 +34,7 @@ class BaseFormTokenListener extends AbstractListener {
 
     /**
      * 
-     * @return \Gossamer\Aker\Components\Core\Client
+     * @return \Gossamer\Aker\Components\Security\Core\Client
      */
     protected function getClient() {
         $token = $this->getSecurityContextToken();
@@ -53,7 +53,7 @@ class BaseFormTokenListener extends AbstractListener {
 
     /**
      * 
-     * @return \Gossamer\Aker\Components\Core\FormToken
+     * @return \Gossamer\Aker\Components\Security\Core\FormToken
      */
     protected function getSecurityContextToken() {
         $token = unserialize(getSession('_security_secured_area'));

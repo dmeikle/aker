@@ -9,10 +9,10 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Core;
+namespace Gossamer\Aker\Components\Security\Core;
 
-use Gossamer\Aker\Components\Core\TokenInterface;
-use Gossamer\Aker\Components\Core\Client;
+use Gossamer\Aker\Components\Security\Core\TokenInterface;
+use Gossamer\Aker\Components\Security\Core\Client;
 
 /**
  * the security token used to identify a user on each request

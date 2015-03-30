@@ -11,7 +11,7 @@
 
 namespace Gossamer\Aker\Components\Security\eventlisteners;
 
-use Gossamer\Aker\Components\Core\FormToken;
+use Gossamer\Aker\Components\Security\Core\FormToken;
 
 
 /**
@@ -84,7 +84,7 @@ class VerifyFormTokenListener extends BaseFormTokenListener{
     
     /**
      * 
-     * @return \Gossamer\Aker\Components\Core\FormToken
+     * @return \Gossamer\Aker\Components\Security\Core\FormToken
      */
     private function getToken() {
         $token = unserialize(getSession('_form_security_token'));

@@ -9,7 +9,7 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Exceptions;
+namespace Gossamer\Aker\Components\Security\Exceptions;
 
 /**
  * ClientCredentialsNotFoundException
