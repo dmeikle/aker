@@ -9,20 +9,13 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Authorizations;
-
-use Gossamer\Aker\Components\Core\TokenInterface;
+namespace Gossamer\Aker\Components\Exceptions;
 
 /**
- * SecurityContextInterface
+ * ArgumentNotPassedException
  *
  * @author Dave Meikle
  */
-interface SecurityContextInterface {
-
-    public function getToken();
-
-    public function setToken(TokenInterface $token);
-
-    public function isGranted(mixed $attributes, mixed $object = null);
+class ArgumentNotPassedException extends \Exception {
+    
 }

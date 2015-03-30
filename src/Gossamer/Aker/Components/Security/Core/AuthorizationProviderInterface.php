@@ -9,20 +9,18 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Authorizations;
+namespace Gossamer\Aker\Components\Core;
 
-use Gossamer\Aker\Components\Core\TokenInterface;
+use Gossamer\Aker\Components\Core\ClientInterface;
 
 /**
- * SecurityContextInterface
- *
+ * AuthorizationProviderInterface
+ * 
  * @author Dave Meikle
  */
-interface SecurityContextInterface {
+interface AuthorizationProviderInterface {
 
-    public function getToken();
+    public function setClient(ClientInterface $client);
 
-    public function setToken(TokenInterface $token);
-
-    public function isGranted(mixed $attributes, mixed $object = null);
+    public function isAuthorized();
 }

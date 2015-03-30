@@ -9,20 +9,17 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Authorizations;
+namespace Gossamer\Aker\Components\Security\http\firewall;
 
 use Gossamer\Aker\Components\Core\SecurityContextInterface;
+use Gossamer\Aker\Components\Core\AuthenticationManager;
 
 /**
- * AuthenticationManagerInterface
+ * FirewallInterface
  *
  * @author Dave Meikle
  */
-interface AuthenticationManagerInterface {
+interface AuthorizationInterface {
 
-    public function authenticate(SecurityContextInterface $context); //(TokenInterface $token);    
-
-    public function generateEmptyToken();
-
-    public function getClient();
+    public function __construct(SecurityContextInterface $context, AuthenticationManager $manager);
 }

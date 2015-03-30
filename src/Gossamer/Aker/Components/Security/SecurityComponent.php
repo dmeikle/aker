@@ -9,20 +9,19 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Authorizations;
+namespace Gossamer\Aker\Components\Security;
 
-use Gossamer\Aker\Components\Core\TokenInterface;
+use core\AbstractComponent;
 
 /**
- * SecurityContextInterface
- *
+ * component for security
+ * 
  * @author Dave Meikle
  */
-interface SecurityContextInterface {
+class SecurityComponent extends AbstractComponent {
 
-    public function getToken();
+    protected function getChildNamespace() {
+        return str_replace('\\', DIRECTORY_SEPARATOR, __NAMESPACE__);
+    }
 
-    public function setToken(TokenInterface $token);
-
-    public function isGranted(mixed $attributes, mixed $object = null);
 }
