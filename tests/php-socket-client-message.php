@@ -30,8 +30,7 @@ class WebsocketClient
                 'serverAuthToken' => '123',
 		'method' => 'request_new_token',
 		'clientIp' => '192.168.2.120',
-		'name' => 'Dave',
-                'StaffId' => '2'
+		'name' => 'Dave'
 		));
 		// send actual data:
 		fwrite($this->_Socket, "\x00" . $data . "\xff" ) or die('Error:' . $errno . ':' . $errstr); 
@@ -53,9 +52,9 @@ class WebsocketClient
 		$header.= "Host: ".$host.":".$port."\r\n";
 		$header.= "Origin: http://foobar.com\r\n";
 		$header.= "ServerAuthToken: 123456\r\n";
-		$header.= "Request: REQUEST_NEW_TOKEN\r\n";
-                $header.= "ClientIp: 192.168.2.120\r\n";
-                $header.= "StaffId: 2\r\n";
+		$header.= "Request: SEND_CLIENT_NOTIFICATION\r\n";
+                $header.= "RoomId: 1\r\n";
+                $header.= "Message: this is a test\r\n";
                 $header.= 'Sec-WebSocket-Key: ' . $key1 . "\r\n";
 		$header.= "Sec-WebSocket-Key1: " . $key1 . "\r\n";
 		$header.= "Sec-WebSocket-Key2: " . $key2 . "\r\n";

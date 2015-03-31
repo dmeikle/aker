@@ -9,7 +9,7 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Authorizations;
+namespace Gossamer\Aker\Components\Security\Core;
 
 use Gossamer\Aker\Components\Security\Core\TokenInterface;
 

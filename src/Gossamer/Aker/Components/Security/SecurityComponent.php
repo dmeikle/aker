@@ -9,7 +9,9 @@
  *  file that was distributed with this source code.
  */
 
-namespace core\components\security;
+
+namespace Gossamer\Aker\Components\Security;
+
 
 use core\AbstractComponent;
 

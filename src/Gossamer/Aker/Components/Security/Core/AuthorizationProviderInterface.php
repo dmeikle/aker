@@ -9,13 +9,18 @@
  *  file that was distributed with this source code.
  */
 
-namespace Gossamer\Aker\Components\Security\Exceptions;
+namespace Gossamer\Aker\Components\Security\Core;
+
+use Gossamer\Aker\Components\Security\Core\ClientInterface;
 
 /**
- * TokenMissingException
- *
+ * AuthorizationProviderInterface
+ * 
  * @author Dave Meikle
  */
-class TokenMissingException extends \Exception {
-    
+interface AuthorizationProviderInterface {
+
+    public function setClient(ClientInterface $client);
+
+    public function isAuthorized();
 }
